@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: guestbook
-    repoURL: https://github.com/ronanbarrett/argocd-example-apps
+    repoURL: https://github.com/ronanbarrett/argocd-example-apps.git
     targetRevision: HEAD
