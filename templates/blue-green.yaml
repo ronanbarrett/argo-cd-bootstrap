@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     path: blue-green
-    repoURL: https://github.com/ronanbarrett/argocd-example-apps/blue-green
+    repoURL: https://github.com/ronanbarrett/blue-green
     targetRevision: {{ .Values.spec.source.targetRevision }}
