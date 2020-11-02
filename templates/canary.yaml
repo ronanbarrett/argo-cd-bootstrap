@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: canary
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: canary
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: canary
+    repoURL: https://github.com/ronanbarrett/argocd-example-apps/canary
+    targetRevision: {{ .Values.spec.source.targetRevision }}
