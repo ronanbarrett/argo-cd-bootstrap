@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-guestbook
+  name: blue-green
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: helm-guestbook
+    namespace: blue-green
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: helm-guestbook
-    repoURL: {{ .Values.spec.source.repoURL }}
+    path: blue-green
+    repoURL: https://github.com/ronanbarrett/argocd-example-apps/blue-green
     targetRevision: {{ .Values.spec.source.targetRevision }}
