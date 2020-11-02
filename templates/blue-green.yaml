@@ -14,3 +14,6 @@ spec:
     path: .
     repoURL: https://github.com/ronanbarrett/blue-green
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  spec:
+    syncPolicy:
+      automated: {} #always track git changes and auto sync
