@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: blue-green
+    path: .
     repoURL: https://github.com/ronanbarrett/blue-green
     targetRevision: {{ .Values.spec.source.targetRevision }}
